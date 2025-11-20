@@ -14,7 +14,7 @@ const ClothesSection = () => {
   ];
 
 return (
-    <div className="w-full flex bg-gray-100 items-center justify-center gap-23 py-6">
+    <div className="w-full flex bg-gray-100 items-center justify-center gap-23 py-6 mt-10">
       {items.map((i, index) => (
         <div key={index} className="flex flex-col items-center">
           <div className="w-15 h-15 rounded-full overflow-hidden">

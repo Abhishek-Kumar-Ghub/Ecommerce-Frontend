@@ -1,7 +1,7 @@
-import { Zap } from "lucide-react";
-import React from "react";
+import React from 'react'
 
-const ProductSection2 = () => {
+const Todays = () => {
+
   const items = [
     { title: "EliteShield Performance Men's Jackets", img: "/Tshirt.avif", price: "Rp255.000", oldPrice: "Rp525.000" },
     { title: "JacUrbanShield Winter Jacket", img: "/Jacket.avif", price: "Rp255.000", oldPrice: "Rp525.000" },
@@ -13,31 +13,25 @@ const ProductSection2 = () => {
     { title: "Gentlemen's Summer Gray Hat - Premium Blend", img: "/cap.avif", price: "Rp255.000", oldPrice: "Rp525.000" },
   ];
 
+
   return (
-    <div className="w-full bg-gray-50 p-6 rounded-xl shadow-sm mt-15">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-15 ml-10 mt-10">
-        <div className="flex items-center gap-2">
-          <div className='h-10 w-10'>
-            <img src="/energy.png" alt="" />
-          </div>
-          <span className="text-xl font-semibold">Flash Sale</span>
+    <div className='bg-white-100 h-200 mt-10 ml-10'>
+        <div className='flex'>
+        <div className='text-3xl font-bold '> Todays For You ! </div>
+     
+      <div className='flex gap-10 ml-130'>
 
-          <div className="flex gap-2 text-white font-semibold">
-            <span className="bg-red-500 px-2 py-1 rounded-md">08</span> :
-            <span className="bg-red-500 px-2 py-1 rounded-md">17</span> :
-            <span className="bg-red-500 px-2 py-1 rounded-md">56</span>
-          </div>
-        </div>
-
-        <div className="flex gap-2">
-          <button className="w-8 h-8 border rounded-md">&larr;</button>
-          <button className="w-8 h-8 border rounded-md">&rarr;</button>
-        </div>
+          <button className='border rounded-xl p-1'>Best Seller</button>
+        <button className='border rounded-xl p-1'>Keep Stylish</button>
+        <button className='border rounded-xl p-1'>Special Discount</button>
+        <button className='border rounded-xl p-1'>Official Store</button>
+        <button className='border rounded-xl p-1'>Coveted Product</button>
       </div>
+        </div>
 
-      {/* Product Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 ml-10 mb-10">
+
+        {/* Product Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-10 mb-10">
 
         {items.map((i, index) => (
           <div 
@@ -67,20 +61,14 @@ const ProductSection2 = () => {
                 {i.oldPrice}
               </span>
             </div>
-
-            {/* Progress */}
-            <div className="mt-2">
-              <div className="w-full bg-gray-200 h-2 rounded-full">
-                <div className="bg-black h-2 rounded-full w-[80%]"></div>
-              </div>
-              <p className="text-xs mt-1 text-gray-500">9/10 Sale</p>
-            </div>
-          </div>
+             </div>
         ))}
+         </div>
+        
+  </div>
+    
+   
+  )
+}
 
-      </div>
-    </div>
-  );
-};
-
-export default ProductSection2;
+export default Todays;
