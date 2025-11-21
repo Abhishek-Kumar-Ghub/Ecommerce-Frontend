@@ -45,7 +45,9 @@ const BestSelling = () => {
 
 
     </div>
-    <div className='border'></div>
+    <div className='border'>
+      <img src="/17.png" alt="" />
+    </div>
     <div className='border'></div>
     <div className='border'></div>
         
