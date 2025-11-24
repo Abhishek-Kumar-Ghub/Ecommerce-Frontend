@@ -1,41 +1,75 @@
 import React from 'react'
-import Navbar from './component/Navbar.jsx'
-import HeroSection from './sections/HeroSection.jsx'
-import ProductSection from './sections/ProductSection.jsx'
-import TopRated from './sections/TopRated.jsx'
-import SingleProducts from './component/SingleProducts.jsx'
-import ClothesSection from './sections/ClothesSection.jsx'
-import ProductSection2 from './sections/ProductSection2.jsx'
-import { createBrowserRouter } from 'react-router-dom'
-import { RouterProvider } from 'react-router'
-import Todays from './sections/Todays.jsx'
-import BestSelling from './sections/BestSelling.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext.jsx'
+import { CartProvider } from './context/CartContext.jsx'
+import Layout from './component/Layout.jsx'
+import Home from './pages/Home.jsx'
+import ProductDetail from './pages/ProductDetail.jsx'
+import Category from './pages/Category.jsx'
+import Login from './pages/Login.jsx'
+import Signup from './pages/Signup.jsx'
+import AdminProductForm from './pages/AdminProductForm.jsx'
+import Cart from './pages/Cart.jsx'
+import Profile from './pages/Profile.jsx'
+import AdminOrders from './pages/AdminOrders.jsx'
+import Products from './pages/Products.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <Navbar />
-        <HeroSection />
-        <ProductSection />
-        <TopRated />
-        <SingleProducts />
-        <ClothesSection />
-        <ProductSection2 />
-        <Todays />
-        <BestSelling/>
-      </>
-    )
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />
+      },
+      {
+        path: "product/:id",
+        element: <ProductDetail />
+      },
+      {
+        path: "category/:category",
+        element: <Category />
+      },
+      {
+        path: "admin/products",
+        element: <AdminProductForm />
+      },
+      {
+        path: "cart",
+        element: <Cart />
+      },
+      {
+        path: "profile",
+        element: <Profile />
+      },
+      {
+        path: "admin/orders",
+        element: <AdminOrders />
+      },
+      {
+        path: "products",
+        element: <Products />
+      }
+    ]
   },
-
   {
-    path: "/ProductSection2",
-    element: <ProductSection2 />
+    path: "/login",
+    element: <Login />
+  },
+  {
+    path: "/signup",
+    element: <Signup />
   }
 ])
 
 const App = () => {
-  return <RouterProvider router={router} />
+  return (
+    <AuthProvider>
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
+    </AuthProvider>
+  )
 }
 export default App

@@ -1,0 +1,62 @@
+export const products = [
+  {
+    id: "69243750181718ad90943604",
+    title: "EliteShield Performance Men's Jacket",
+    image: "/Jacket.avif",
+    price: "Rp255.000",
+    originalPrice: "Rp525.000",
+    category: "jacket",
+    rating: 4.8,
+    reviews: 234,
+    description: "Premium quality men's jacket designed for comfort and style.",
+    features: ["Water-resistant fabric", "Breathable lining", "Multiple pockets"],
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Black', 'Navy', 'Gray'],
+    inStock: true
+  },
+  {
+    id: "69243750181718ad90943605",
+    title: "Gentlemen's Summer Gray Hat",
+    image: "/cap.avif",
+    price: "Rp99.000",
+    originalPrice: "Rp199.000",
+    category: "accessories",
+    rating: 4.5,
+    reviews: 156,
+    description: "Premium blend summer hat for gentlemen.",
+    features: ["Breathable material", "UV protection", "Adjustable size"],
+    sizes: ['S', 'M', 'L'],
+    colors: ['Gray', 'Black', 'Navy'],
+    inStock: true
+  },
+  {
+    id: "69243750181718ad90943606",
+    title: "OptiZoom Camera Shoulder Bag",
+    image: "/Bag.avif",
+    price: "Rp250.000",
+    originalPrice: "Rp500.000",
+    category: "bags",
+    rating: 4.7,
+    reviews: 189,
+    description: "Professional camera bag with multiple compartments.",
+    features: ["Padded compartments", "Weather-resistant", "Adjustable strap"],
+    sizes: ['One Size'],
+    colors: ['Black', 'Brown', 'Gray'],
+    inStock: true
+  },
+  {
+    id: "69243750181718ad90943607",
+    title: "Cloudy Chic Grey Peep Toe Heeled Sandals",
+    image: "/shoes.avif",
+    price: "Rp270.000",
+    originalPrice: "Rp540.000",
+    category: "shoes",
+    rating: 4.6,
+    reviews: 267,
+    description: "Stylish grey peep toe heeled sandals.",
+    features: ["Comfortable heel", "Non-slip sole", "Premium materials"],
+    sizes: ['36', '37', '38', '39', '40'],
+    colors: ['Gray', 'Black', 'Beige'],
+    inStock: true
+  }
+]
